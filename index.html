@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Happy Easter 🐣</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial;
+      background-color: #fff6f9;
+      padding-top: 100px;
+    }
+
+    #egg {
+      font-size: 60px;
+      cursor: pointer;
+    }
+
+    #message {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+
+    #photo {
+      display: none;
+      margin-top: 20px;
+    }
+
+    img {
+      max-width: 300px;
+      border-radius: 16px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div id="message">
+  Happy Easter 🐣<br><br>
+  I hid something for you…<br>
+  from your favorite ex (don’t argue) 😝
+</div>
+
+<div id="egg" onclick="handleClick()">🥚</div>
+
+<div id="photo">
+  <p>
+    hehe 🤭<br><br>
+    hope this little one has a happy Easter 🐣<br><br>
+    you were so cute btw… what happened?! 🤣<br>
+    jk jk you’re still cute to this day :)
+  </p>
+  <img src="baby.jpg" alt="baby photo">
+</div>
+
+<script>
+  let clicks = 0;
+
+  function handleClick() {
+    clicks++;
+
+    if (clicks === 1) {
+      document.getElementById("message").innerHTML =
+        "HAHA 😝 not that easy<br><br>try again…";
+    } else if (clicks === 2) {
+      document.getElementById("egg").style.display = "none";
+      document.getElementById("photo").style.display = "block";
+    }
+  }
+</script>
+
+</body>
+</html>
