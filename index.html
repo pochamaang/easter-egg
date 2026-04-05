@@ -5,14 +5,31 @@
   <style>
     body {
       text-align: center;
-      font-family: Arial;
+      font-family: Arial, sans-serif;
       background-color: #fff6f9;
       padding-top: 100px;
     }
 
     #egg {
-      font-size: 60px;
+      width: 120px;
+      height: 160px;
+      margin: 0 auto;
+      border-radius: 50% 50% 50% 50%;
+      background: linear-gradient(135deg, #ffb6c1, #ffe4b5, #add8e6, #98fb98);
+      display: flex;
+      justify-content: center;
+      align-items: center;
       cursor: pointer;
+      font-size: 50px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      transition: transform 0.2s, box-shadow 0.2s;
+      position: relative;
+      top: 20px;
+    }
+
+    #egg:hover {
+      transform: scale(1.2) rotate(10deg);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.4);
     }
 
     #message {
@@ -22,12 +39,17 @@
 
     #photo {
       display: none;
-      margin-top: 20px;
+      margin-top: 30px;
     }
 
-    img {
+    #photo img {
       max-width: 300px;
       border-radius: 16px;
+    }
+
+    #photo p {
+      font-size: 18px;
+      line-height: 1.5;
     }
   </style>
 </head>
@@ -40,7 +62,7 @@
   from your favorite ex (don’t argue) 😝
 </div>
 
-<div id="egg" onclick="handleClick()">🥚</div>
+<div id="egg" onclick="handleClick()">🐣</div>
 
 <div id="photo">
   <p>
